@@ -5,6 +5,7 @@ test(`New coffee can be added to the  Menu`, async ({}) => {
   // This is a fake example test.
   await allure.parentSuite(`admin site`);
   await allure.suite('Edit menu');
+  await allure.subSuite('Cup addet to total');
 
   await allure.severity(`minor`);
 
