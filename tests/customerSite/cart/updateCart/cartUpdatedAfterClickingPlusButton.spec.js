@@ -11,6 +11,12 @@ test('Cart updated correctly after clicking plus for drinks', async ({
   await allure.suite('Cart');
   await allure.subSuite('Update Cart');
 
+  await allure.severity(`critical`);
+
+  await allure.epic("Client site");
+  await allure.feature("Update cart");
+  await allure.story("Cart upd after +");
+
   const oneCappuccinoPrice = priceFormatStr(COFFEE_PRICES.cappuccino);
   const twoCappuccinoPrice = priceFormatStr(COFFEE_PRICES.cappuccino * 2);
   const oneEspressoPrice = priceFormatStr(COFFEE_PRICES.espresso);

@@ -17,6 +17,12 @@ testParameters.forEach(({ coffee, price }) => {
     await allure.suite('menu');
     await allure.subSuite('Add coffee');
 
+    await allure.severity(`critical`);
+
+    await allure.epic("Client site");
+    await allure.feature("Coffe price");
+    await allure.story("Cost coffe cup after click");
+
     const totalPriceStr = totalPriceFormatStr(price);
 
     await menuPage.open();

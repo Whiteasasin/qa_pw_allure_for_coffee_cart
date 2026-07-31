@@ -21,6 +21,12 @@ testParameters.forEach(({ coffee, price }) => {
     await allure.suite('Cart');
     await allure.subSuite('Add to cart');
 
+    await allure.severity(`critical`);
+
+    await allure.epic("Client site");
+    await allure.feature("Add to cart");
+    await allure.story("Coffee cup adding to cart");
+
     const totalPriceStr = priceFormatStr(price);
     const unitPriceStr = unitPriceFormatStr(price, 1);
 
